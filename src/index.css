@@ -1,152 +1,23 @@
-/* src/index.css */
-
-/* === Estilos Globales === */
-body {
-    background: url('https://wallpapercave.com/wp/wp1818065.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #e5e5e5; /* Texto claro para contraste con el fondo oscuro */
-    font-family: 'Orbitron', sans-serif; /* Tipografía futurista */
-    margin: 0;
-    padding: 0;
+:root {
+    --star-wars-yellow: #ffe81f; /* Amarillo clásico de Star Wars */
+    --imperial-red: #ed1c24; /* Rojo Sith/Imperial */
+    --jedi-blue: #2a82da; /* Azul Jedi/República */
+    --dark-space: #0a0a0a; /* Fondo oscuro */
+    --star-glow: #4d4d4d; /* Brillo de estrellas */
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    color: #ffe81f; /* Amarillo Star Wars */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  body {
+    background-color: var(--dark-space);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-image: 
+      radial-gradient(var(--star-glow) 1px, transparent 1px),
+      radial-gradient(var(--star-glow) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px; /* Efecto de estrellas */
   }
   
-  a {
-    color: #ffe81f;
-  }
-  
-  a:hover {
-    color: #ffcc00;
-  }
-  
-  .container {
-    background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para mejor legibilidad */
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-  /* Botón temático de Star Wars */
-  .btn-sw-yellow {
-    background-color: #ffe81f;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .btn-sw-yellow:hover {
-    background-color: #ffcc00;
-    color: #000;
-  }
-  
-  /* Estilo para el ícono de favoritos */
-  .custom-heart {
-    cursor: pointer;
-    font-size: 1.5rem;
-  }
-  
-  /* Estilo para el divisor temático */
-  .sw-divider {
-    border-color: #ffe81f;
-  }
-  
-  /* === Estilos para Home.jsx === */
-  .hero-banner {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 50px 20px;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #ffe81f;
-  }
-  
-  .hero-logo {
-    max-width: 300px;
-    margin-bottom: 20px;
-  }
-  
-  /* === Estilos para las tarjetas (PeopleCard, PlanetCard, VehicleCard) === */
-  .people-card-container,
-  .planet-card-container,
-  .vehicle-card-container {
-    margin: 1rem;
-  }
-  
-  .sw-card {
-    background: #1a1a1a;
-    border: 1px solid #ffe81f;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .sw-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255, 232, 31, 0.5);
-  }
-  
-  .sw-card .card-img-top {
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  
-  .sw-card .card-body {
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: #e5e5e5;
-  }
-  
-  .sw-card .card-title {
-    color: #e5e5e5;
-    font-size: 1.25rem;
-  }
-  
-  /* === Estilos para PlanetDetail.jsx === */
-  .planet-detail-table th,
-  .planet-detail-table td {
-    color: #dc3545;
-    font-size: 1.1rem;
-  }
-  
-  /* === Estilos para VehicleDetail.jsx === */
-  .vehicle-detail-table th,
-  .vehicle-detail-table td {
-    color: #dc3545;
-    font-size: 1.1rem;
-  }
-  
-  /* === Estilos para Layout.jsx === */
-  .sw-navbar {
-    background: #000;
-    border-bottom: 2px solid #ffe81f;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  .navbar-logo {
-    max-height: 50px;
-  }
-  
-  .nav-link {
-    color: #e5e5e5;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  .nav-link:hover {
-    color: #ffe81f;
-  }
-  
-  .sw-footer {
-    background: #000;
-    color: #e5e5e5;
-    border-top: 2px solid #ffe81f;
-    margin-top: 30px;
+  /* Efecto de hiperespacio en el scroll */
+  html {
+    scroll-behavior: smooth;
   }
